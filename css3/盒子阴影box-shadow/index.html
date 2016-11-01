@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>box-shadow</title>
+    <style type="text/css">
+    .box-shadow div {
+        width: 300px;
+        height: 300px;
+        margin: 80px auto;
+        background-color: #ff8200;
+    }
+
+    .test1 {
+        box-shadow: -20px 0 0 green, /*左边阴影*/
+        0 -20px 0 blue, /*顶部阴影*/
+        0 20px 0 red, /*底部阴影*/
+        20px 0 0 yellow;  /*右边阴影*/
+    }
+
+    .test2 {
+         box-shadow: -20px 0 15px green, /*左边阴影*/
+        0 -20px 15px blue, /*顶部阴影*/
+        0 20px 15px red, /*底部阴影*/
+        20px 0 15px yellow;  /*右边阴影*/
+    }
+
+    .test3 {
+         box-shadow: -20px -20px 15px green, /*left top边阴影*/
+        20px 20px 15px blue;/*right bottom部阴影*/
+
+    }
+
+    .test4 {
+        box-shadow: 5px 5px 10px #333;
+    }
+
+     .test5{
+          box-shadow: inset -20px 0 10px green, /*左边阴影*/
+          inset 0 -20px 10px blue, /*顶部阴影*/
+          inset 0 20px 10px red, /*底部阴影*/
+          inset 20px 0 10px yellow;  /*右边阴影*/
+    }
+
+    </style>
+</head>
+
+<body class="box-shadow">
+    <div class="test1"></div>
+    <div class="test2"></div>
+    <div class="test3"></div>
+    <div class="test4"></div>
+    <div class="test5"></div>
+
+</body>
+
+</html>

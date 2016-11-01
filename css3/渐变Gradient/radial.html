@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>渐变Gradient--radial</title>
+    <style>
+    div {
+        width: 200px;
+        height: 100px;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .test {
+        background: radial-gradient(circle at center, #f00, #ff0, #080);
+        /*shape 参数定义了形状。它可以是值 circle 或 ellipse。其中，circle 表示圆形，ellipse 表示椭圆形*/
+    }
+
+    .test2 {
+        background: radial-gradient(circle closest-side, #f00, #ff0, #080);
+        /*size 参数定义了渐变的大小。它有四个值：closest-side，farthest-side，closest-corner，farthest-corner*/
+    }
+
+    .test3 {
+        background: radial-gradient(farthest-side, #f00 20%, #ff0 50%, #080 80%);
+        /* 颜色结点不均匀分布的径向渐变：*/
+    }
+
+    .test4 {
+        background: radial-gradient(at top right, #f00, #ff0, #080);
+    }
+
+    .test5 {
+        background: radial-gradient(farthest-side at top right, #f00, #ff0, #080);
+    }
+
+    .test6 {
+        background: radial-gradient(farthest-side at top right, #f00, #ff0, #080, transparent), radial-gradient(60px at top left, #f00, #ff0, #080);
+    }
+
+    .test7 {
+        background-image: -webkit-radial-gradient(100px 100px at 100px 50px, #f00, #ff0, #080);
+        background-image: radial-gradient(100px 100px at 100px 50px, #f00, #ff0, #080);
+    }
+
+    .test8 {
+        background-image: -webkit-radial-gradient(30% 50% at 100px 50px, #f00, #ff0, #080);
+        background-image: radial-gradient(30% 50% at 100px 50px, #f00, #ff0, #080);
+    }
+
+    .test9 {
+        background: -moz-radial-gradient(bottom left, circle, #f00, #ff0, #080);
+        background: -webkit-radial-gradient(bottom left, circle, #f00, #ff0, #080);
+        background: radial-gradient(bottom left, circle, #f00, #ff0, #080);
+    }
+
+    .test10 {
+        background: -moz-radial-gradient(ellipse closest-side,#f00 10%, #ff0 50%, #080);
+        background: -webkit-radial-gradient(ellipse closest-side,#f00 10%, #ff0 50%, #080);
+          background: radial-gradient(ellipse closest-side,#f00 10%, #ff0 50%, #080);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="test1">1</div>
+    <div class="test2">2</div>
+    <div class="test3">3</div>
+    <div class="test4">4</div>
+    <div class="test5">5</div>
+    <div class="test6">6</div>
+    <div class="test7">7</div>
+    <div class="test8">8</div>
+    <div class="test9">9</div>
+    <div class="test10">10</div>
+</body>
+
+</html>

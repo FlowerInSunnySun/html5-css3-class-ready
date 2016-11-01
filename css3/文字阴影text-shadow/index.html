@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>text-shadow</title>
+    <style type="text/css">
+    .demo {
+        background: #666666;
+        width: 60%;
+        padding: 30px;
+        margin: 0 auto;
+        font: bold 55px/100% "微软雅黑", "Lucida Grande", "Lucida Sans", Helvetica, Arial, Sans;
+        color: #eee;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .box1 {
+        text-shadow: 5px 5px 0 #666, 7px 7px 0 #eee;
+    }
+
+    .box2 {
+        background: transparent;
+        text-shadow: 5px 5px 0 #666666, 7px 7px 0 #ff0000;
+        filter: Shadow(color=#ff0000, direction=45, Strength=5);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="demo box1"> welcome to my class </div>
+    <div class="demo box2">
+        <span>Shadow滤镜演示</span>
+    </div>
+
+</body>
+
+</html>
