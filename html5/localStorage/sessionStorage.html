@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>	sessionStorage</title>
+    <meta charset="UTF-8">
+    <title> sessionStorage</title>
 </head>
+
 <body>
-<a href="localStorage.html">跳转到LocalStorage页面</a>
+    <p>我是页面sessionStorage</p>
+    <script>
+    sessionStorage.setItem('password','12345');
+    sessionStorage.setItem('username','yimei');
 
-<script>
-// sessionStorage.setItem('password','12345');
+    console.log(window.sessionStorage)
 
-console.log(sessionStorage.getItem('password'))
-</script>
+        // sessionStorage.removeItem("password")   //删除某个缓存的数值
+        // sessionStorage.clear() //清空缓存
+
+    // console.log(sessionStorage.getItem('password'))
+    // var username = localStorage.getItem('username')
+    // var arr=JSON.parse(localStorage.getItem('arr3'))
+    // var obj=JSON.parse(localStorage.getItem('obj2'));
+    // alert(obj.sex);
+
+    </script>
 </body>
+
 </html>

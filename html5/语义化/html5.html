@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>html5语义化标签</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    article,
+    aside,
+    dialog,
+    summary footer,
+    header,
+    section,
+    footer,
+    nav,
+    figure,
+    menu {
+        display: block
+    }
+
+    .wrapper {
+        text-align: center;
+    }
+
+    header {
+        background-color: #ff8200;
+        height: 100px;
+    }
+
+    nav {
+        background-color: #0f0;
+        height: 80px;
+    }
+
+    menu {
+        background-color: #c2c;
+        height: 80px;
+    }
+
+    dialog {
+        background-color: #ffc;
+        width: 30%;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    summary {
+        background-color: #3e4;
+        height: 80px;
+    }
+
+    article {
+        padding: 10px;
+        background-color: #666;
+        height: 500px;
+    }
+
+    section {
+        background-color: #ff0;
+        height: 250px;
+    }
+
+    .content {
+        width: 70%;
+    }
+
+    .section2 {
+        background-color: #2cf;
+    }
+
+    aside {
+        background-color: #f3c;
+        width: 30%;
+        height: 500px;
+    }
+
+    footer {
+        background-color: #f00;
+        height: 100px;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        content: '', display: table;
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>header</header>
+        <nav>nav</nav>
+        <menu>menu</menu>
+        <dialog>dialog</dialog>
+        <summary>summary</summary>
+        <article class="clearfix">
+            <div class="left content">
+                <section class="section1"> section1 </section>
+                <section class="section2"> section2 </section>
+            </div>
+            <aside class="right"> aside </aside>
+        </article>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>

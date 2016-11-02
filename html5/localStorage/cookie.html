@@ -1,10 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>	</title>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+    li {
+        list-style: none;
+        margin: 10px auto;
+    }
+    </style>
 </head>
+
 <body>
-	<script></script>
+    <ul>
+        <li>
+            <button type="button" onclick="document.cookie='firstname=John'">创建 Cookie 1 firstname=John </button>
+        </li>
+        <li>
+            <button type="button" onclick="document.cookie='lastname=Smith'">创建 Cookie 2 lastname=Smith</button>
+        </li>
+        <li>
+            <button type="button" onclick="displayCookies();">显示所有 Cookie</button>
+        </li>
+        <li>
+            <button type="button" onclick="document.cookie='lastname=Rose'">修改 Cookie 2 lastname=Rose </button>
+        </li>
+        <li>
+            <button type="button" onclick="displayCookies();">显示所有 Cookie</button>
+        </li>
+        <li>
+            <button type="button" onclick="document.cookie='firstname=John;expires=Thu, 01 Jan 1970 00:00:00 GMT'">删除 Cookie 1</button>
+        </li>
+        <li>
+            <button type="button" onclick="document.cookie='lastname=Smith;expires=Thu, 01 Jan 1970 00:00:00 GMT'">删除 Cookie 2</button>
+        </li>
+
+
+    </ul>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+    function displayCookies() {
+        var fname = getCookie("firstname");
+        if (fname == null) {
+            fname = "";
+        }
+        if (fname != "") {
+            fname = "firstname=" + fname;
+        }
+        var lname = getCookie("lastname");
+        if (lname == null) {
+            lname = "";
+        }
+        if (lname != "") {
+            lname = "; lastname=" + lname;
+        }
+        alert(fname + lname);
+    }
+
+    function getCookie(name) {
+
+        // var cookieData = document.cookie; //获取cookie数据
+        // var ca = cookieData.split(';') //split()将字符串分割为数组["firstname=John","lastname=Smith"]
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i].trim(); //trim()去掉字符串首尾空格
+            if (c.indexOf(nameEQ) == 0)
+            //indexOf 返回某个指定的字符串值在字符串中首次出现的位置,如果字符串值没有出现，则该方法返回 -1
+            {
+                return c.substring(nameEQ.length, c.length);//substring() [提取字符串中介于两个指定下标之间的字符)
+
+            }
+        }
+        return null;
+    }
+
+
+
+    </script>
 </body>
+
 </html>
