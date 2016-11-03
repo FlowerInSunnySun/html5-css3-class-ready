@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>响应式布局</title>
+</head>
+
+<body>
+    <!--   <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-size: 62.5%;
+    }
+
+    16*0.625=10,
+    默认是1em=10px .em16 {
+        font-size: 1.6em;
+    }
+
+    .em18 {
+        font-size: 1.8em;
+    }
+    </style>
+    <h1>em:</h1>
+    <span>测试em</span>
+    <br>
+    <span class="em16">测试em</span>
+    <br>
+    <div class="test1 em18">
+        <p class="test1p em16"><span class="test1span">测试em</span></p>
+    </div>
+
+<hr>
+
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    .rem16 {
+        font-size: 1.6rem;
+    }
+
+    .rem18 {
+        font-size: 1.8rem;
+    }
+    </style>
+    <h1>rem:</h1>
+    <span>测试rem</span>
+    <br>
+    <span class="rem16">测试rem</span>
+    <br>
+    <div class="test2 rem18">
+        <p class="test2p"><span class="test2span ">测试rem</span></p>
+    </div>
+
+    <hr>
+ -->
+   <!--  <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        content: '';
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    .clearfix {
+        *z-zoom: 1;
+    }
+
+    .test3item {
+        float: left;
+        width: 33.3333%;
+        height: 100px;
+        background-color: #f00;
+    }
+
+    .test3 .test3item:nth-child(2) {
+        background-color: #0f0;
+    }
+    </style>
+    <h1>%:</h1>
+    <div class="test3 clearfix">
+        <div class="test3item"></div>
+        <div class="test3item"></div>
+        <div class="test3item"></div>
+    </div>
+    <hr> -->
+
+    <h1>flex</h1>
+    <style type="text/css">
+        *{
+          padding:0;
+          margin:0;
+        }
+      .test4{
+
+        background-color: #666;
+        width:100%;
+        height:200px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+       align-content: flex-start
+       flex-wrap:wrap;
+
+      }
+      .test4item{
+        background-color: #f00;
+        width:200px;
+        height: 20px;
+        align-self: auto;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex:1;
+
+      }
+      .test4item:nth-child(2){
+        height:80px;
+      }
+    </style>
+    <div class="test4">
+      <div class="test4item"></div>
+      <div class="test4item"></div>
+      <div class="test4item"></div>
+       <div class="test4item"></div>
+      <div class="test4item"></div>
+      <div class="test4item"></div>
+       <div class="test4item"></div>
+      <div class="test4item"></div>
+
+    </div>
+    <hr>
+    <h1>媒体查询</h1>
+    <hr>
+</body>
+
+</html>
